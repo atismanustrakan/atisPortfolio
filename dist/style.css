@@ -64,3 +64,7 @@ body .project-cards{gap:48px;width:min(100%,860px)}
 
 /* Keep every major section label moving with its content, like Experience. */
 @media(min-width:801px){#projects,#outside,#contact{display:grid;grid-template-columns:190px minmax(0,1fr);gap:54px;align-items:start}#projects .projects-heading{position:sticky;top:112px;align-self:start;margin:0}#projects .projects-heading .section-heading{position:static}#projects .project-cards{width:100%;margin-top:0}#outside>.section-heading,#contact>.section-heading{position:sticky;top:112px;align-self:start;margin:0}#outside .outside-grid,#contact .contact-grid{min-width:0}}
+
+/* Give each personal-interest illustration its own column. */
+@media(min-width:701px){.outside-grid p{max-width:none;padding-right:48%}}
+@media(max-width:700px){.outside-grid p{padding-right:0}}
