@@ -42,6 +42,7 @@ document.querySelectorAll('.project-visual').forEach(figure => {
   button.className = 'preview-trigger';
   button.setAttribute('aria-label', `Enlarge ${name} preview`);
   button.setAttribute('aria-haspopup', 'dialog');
+  button.dataset.cursor = 'VIEW ↗';
   img.before(button);
   button.append(img);
   const hint = document.createElement('span');
@@ -58,6 +59,25 @@ document.querySelectorAll('.project-visual').forEach(figure => {
     document.body.classList.add('preview-open');
   });
 });
+
+if (matchMedia('(pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const cursorLabel = document.createElement('div');
+  cursorLabel.className = 'cursor-label';
+  cursorLabel.setAttribute('aria-hidden', 'true');
+  document.body.append(cursorLabel);
+  document.querySelectorAll('[data-cursor], a[href*="github.com"]').forEach(target => {
+    if (!target.dataset.cursor) target.dataset.cursor = 'CODE ↗';
+    target.addEventListener('pointerenter', () => {
+      cursorLabel.textContent = target.dataset.cursor;
+      cursorLabel.classList.add('is-visible');
+    });
+    target.addEventListener('pointermove', event => {
+      cursorLabel.style.setProperty('--cursor-x', `${event.clientX}px`);
+      cursorLabel.style.setProperty('--cursor-y', `${event.clientY}px`);
+    });
+    target.addEventListener('pointerleave', () => cursorLabel.classList.remove('is-visible'));
+  });
+}
 
 const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', event => {
