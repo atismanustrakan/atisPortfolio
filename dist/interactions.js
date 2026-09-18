@@ -50,7 +50,7 @@ document.querySelectorAll('.project-visual').forEach(figure => {
   button.append(hint);
   button.addEventListener('click', () => {
     opener = button;
-    dialog.querySelector('h2').textContent = name === 'GatorPlanner' ? `${name} · interface concept` : `${name} · homepage`;
+    dialog.querySelector('h2').textContent = `${name} · live interface`;
     const enlarged = dialog.querySelector('img');
     enlarged.src = img.src;
     enlarged.alt = img.alt;
