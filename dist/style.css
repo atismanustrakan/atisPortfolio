@@ -53,3 +53,5 @@ body .project-cards{gap:48px;width:min(100%,860px)}
 .hero-grid{translate:none;opacity:1}
 .tech-marquee.is-offscreen .tech-track{animation-play-state:paused}
 .cursor-label{transform:translate3d(calc(var(--cursor-x) + 14px),calc(var(--cursor-y) + 14px),0);will-change:transform,opacity}
+
+.contact .icon-links{display:flex;align-items:center;gap:22px}.contact .icon-links a{display:grid;place-items:center;width:38px;height:38px;color:var(--text);transition:color .18s,transform .18s}.contact .icon-links a:hover,.contact .icon-links a:focus-visible{color:var(--accent);transform:translateY(-2px)}.contact .icon-links svg{display:block;width:27px;height:27px;fill:currentColor}.contact .icon-links a:nth-child(3) svg,.contact .icon-links a:nth-child(4) svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.contact .icon-links .social-dot{fill:currentColor;stroke:none}@media(prefers-reduced-motion:reduce){.contact .icon-links a{transition:none}.contact .icon-links a:hover,.contact .icon-links a:focus-visible{transform:none}}
