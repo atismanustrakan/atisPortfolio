@@ -68,3 +68,5 @@ body .project-cards{gap:48px;width:min(100%,860px)}
 /* Give each personal-interest illustration its own column. */
 @media(min-width:701px){.outside-grid p{max-width:none;padding-right:48%}}
 @media(max-width:700px){.outside-grid p{padding-right:0}}
+
+.education-coursework{max-width:720px;margin-top:13px!important;color:var(--secondary)!important;font-size:.875rem}.education-coursework strong{color:var(--text);font-weight:550}
