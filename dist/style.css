@@ -105,3 +105,19 @@ body .project-cards{gap:48px;width:min(100%,860px)}
 .court-backboard{stroke-width:2}
 .court-hoop{stroke-width:1.7}
 @media(max-width:700px){.basketball-art{width:190px;max-width:100%;height:118px}}
+
+/* Ongoing work sits between the experience timeline and finished projects. */
+.current-work-list{border-top:1px solid var(--border)}
+.current-work-list article{padding:23px 0 25px;border-bottom:1px solid var(--border)}
+.current-work-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.current-work-heading h3{font-size:clamp(1.05rem,1.8vw,1.25rem);letter-spacing:-.025em}
+.work-status{flex:none;color:var(--accent);font:500 .66rem/1.6 var(--mono);letter-spacing:.06em;text-transform:uppercase;border:1px solid color-mix(in srgb,var(--accent) 35%,var(--border));padding:4px 8px}
+.current-work-list p{max-width:670px;margin-top:9px;color:var(--secondary);font-size:.9375rem;line-height:1.7}
+@media(max-width:600px){.current-work-heading{align-items:flex-start;flex-direction:column;gap:8px}.current-work-list article{padding:20px 0}}
+
+.progress-link{display:inline-flex;align-items:center;gap:9px;margin-top:19px;padding:5px 0;color:var(--accent);font:500 .72rem/1.5 var(--mono);letter-spacing:.025em;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+.progress-link:hover{border-color:var(--accent)}
+.progress-link>span:last-child{margin-left:4px;transition:transform .18s}
+.progress-link:hover>span:last-child{transform:translate(2px,-2px)}
+.progress-dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+@media(prefers-reduced-motion:reduce){.progress-link>span:last-child{transition:none}}
